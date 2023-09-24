@@ -1,0 +1,934 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+    border: 0;
+    outline: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    font-size: 16px;
+    --primaryColor : #1B3764;
+    --secondaryColor : #FFCA42;
+    --colorWhite : #ffffff;
+    --colorWhitev4 : #f4f8ff;
+    --colorWhiteV2 : #F6F8FC;
+    --colorGrayishWhite : #B4C7E7;
+    --colorGray : #969AA0;
+    --width : 80%;
+    --mobileWidth : 96%;
+    --colorBlack : #0a0a0a;
+    --colorWhiteV3:#F4F8FF;
+
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.btn{
+    padding: 0.7rem 1.4rem;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border: 0;
+    font-family: 'Cardo', serif;
+    font-size: 1.2rem;
+}
+.btn-outline{
+    padding: 0.7rem 1.4rem;
+    background-color: transparent;
+    color: var(--secondaryColor);
+    border: 1px solid var(--secondaryColor);
+    font-family: 'Cardo', serif;
+    font-size: 1.2rem;
+}
+/* General Styling / Utility Classes Ends here */
+
+/*========================header section==================================*/
+header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    width: 100%;
+    background-color: var(--primaryColor);
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 12rem 1rem;
+    height: 6rem;
+}
+header nav .logo {
+   
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+header nav .logo .logoWrapper a{
+    display: flex;
+    gap: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    align-items: center;
+    color: var(--colorWhiteV2);
+}
+header nav .logo .iconContainer{
+    display: flex;
+    gap: 1rem;
+}
+header nav .logo .iconContainer a{
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+}
+/* LEFT SIDE OF NAV BAR COMPLETED */
+header .navItems{
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+header .navItems ul{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 1.2rem;
+}
+header .navItems ul li a{
+    font-size: 1.1rem;
+    padding-bottom: 0.4rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--colorWhiteV2);
+    transition: all 600ms ease;
+}
+header .navItems ul li:first-child a{
+    color: var(--secondaryColor);
+    font-weight: 700;
+}
+header .navItems a.shopping-cart i{
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    transition: all 300ms ease;
+}
+header .navItems a.shopping-cart i::before{
+    position: absolute;
+    top: -1.3rem;
+    right: 0;
+    content: '05';
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 'Inter',serif;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primaryColor);
+    border-radius: 50%;
+    background-color: var(--secondaryColor);
+}
+
+header .navItems a.btn{
+    transition: all 600ms ease;
+    font-family: 'Cardo',serif;
+    font-size: 1.1rem;
+    color: var(--primaryColor);
+    font-weight: 700;
+}
+header .navItems ul li:hover a{
+    color: var(--secondaryColor);
+    border-bottom: 1px solid #FFCA42;
+}
+header .navItems a.btn.btn-primary:hover{
+    background-color: transparent;
+    border: 1px solid var(--secondaryColor);
+    color: var(--secondaryColor);
+}
+/*=======================END OF HEADER SECTION ============================*/
+main section#hero{
+    /* position: relative;
+    top: 6rem; */
+    /* margin-top: 6rem; */
+    width: 100%;
+    height: calc(100vh + 6rem);
+    background-color: var(--primaryColor);
+    padding: 10rem 12rem 0rem;
+}
+main section#hero .heroWrapper{
+display: flex;
+}
+
+main section#hero .heroWrapper .leftSection{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+main section#hero .heroWrapper .leftSection > h1{
+    font-family: 'Cardo',serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.1;
+    color: var(--colorWhiteV2);
+}
+main section#hero .heroWrapper .leftSection > p{
+    color: var(--colorGrayishWhite);
+    font-size: 1.2rem;
+    line-height: 1.3;
+
+}
+main section#hero .heroWrapper .rightSection{
+    width: 50%;
+}
+main section#hero .heroWrapper .rightSection .imgWrapper{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: flex-end;
+}
+main section#hero .heroWrapper .leftSection .btnWrapper{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+main section#hero .heroWrapper .leftSection .btnWrapper button.btn{
+    transition: all 600ms ease;
+    font-family: 'Cardo',serif;
+    font-size: 1.1rem;
+    color: var(--primaryColor);
+    font-weight: 700;
+}
+main section#hero .heroWrapper .leftSection .btnWrapper button.btn:hover{
+    background-color: transparent;
+    border: 1px solid var(--secondaryColor);
+    color: var(--secondaryColor);
+}
+main section#hero .heroWrapper .leftSection .btnWrapper a.readMore{
+    color: var(--colorWhiteV2);
+    transition: all 600ms ease;
+    padding: 0.7rem 1.4rem;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-family: 'Cardo',serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid var(--colorGrayishWhite);
+}
+main section#hero .heroWrapper .leftSection .btnWrapper a.readMore:hover{
+    background-color: transparent;
+    border-bottom: none;
+    border: 1px solid var(--secondaryColor);
+    color: var(--secondaryColor);
+}
+main section#hero .heroWrapper .leftSection .welcomePage{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+main section#hero .heroWrapper .leftSection .welcomePage > h3{
+    font-family: 'Cardo', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--colorWhiteV2);
+    font-size: 1.4rem;
+}
+main section#hero .heroWrapper .leftSection .welcomePage span{
+    display: inline-block;
+    width: 3rem;
+    height: 0.3rem;
+    background-color: var(--secondaryColor);
+}
+main section#hero .heroWrapper .leftSection .bookDetail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main section#hero .heroWrapper .leftSection .bookDetail .detail1 , 
+main section#hero .heroWrapper .leftSection .bookDetail .detail2,
+main section#hero .heroWrapper .leftSection .bookDetail .detail3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+main section#hero .heroWrapper .leftSection .bookDetail .detail1 > span ,
+main section#hero .heroWrapper .leftSection .bookDetail .detail2 >span ,
+main section#hero .heroWrapper .leftSection .bookDetail .detail3 > span{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--secondaryColor);
+}
+main section#hero .heroWrapper .leftSection .bookDetail .detail1 .info , 
+main section#hero .heroWrapper .leftSection .bookDetail .detail2 .info ,
+main section#hero .heroWrapper .leftSection .bookDetail .detail3 .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+main section#hero .heroWrapper .leftSection .bookDetail .detail1 .info> h3 ,
+main section#hero .heroWrapper .leftSection .bookDetail .detail2 .info > h3 ,
+main section#hero .heroWrapper .leftSection .bookDetail .detail3 .info > h3{
+    color: var(--colorWhiteV2);
+    font-size: 1.4rem;
+    font-family: 'Cardo',serif;
+    font-weight: 700;
+}
+main section#hero .heroWrapper .leftSection .bookDetail .detail1 .info> p , 
+main section#hero .heroWrapper .leftSection .bookDetail .detail2 .info > p ,
+ main section#hero .heroWrapper .leftSection .bookDetail .detail3 .info > p{
+    color: var(--colorGrayishWhite);
+    font-family: 'Inter',serif;
+    font-size: 1.1rem;
+}
+
+/*===============END OF MAIN SECTION======================*/
+
+main section#authorBook{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--colorWhite);
+    padding: 6rem 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main section#authorBook h2{
+    position: relative;
+    font-family: 'Cardo' , serif;
+    font-size: 2.5rem;
+    color: var(--primaryColor);
+    text-align: center;
+}
+main section#authorBook h2::after{
+    display: inline-block;
+    content: '';
+    width: 5rem;
+    height: 0.15rem;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    z-index: 1;
+    bottom: -0.5rem;
+    left: 42%;
+}
+main section#authorBook .similarBookContainer{
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    margin-inline: auto;
+   
+}
+main section#authorBook .similarBookContainer .bookImage{
+    width: 70%;
+}
+main section#authorBook .content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+main section#authorBook .content >h3{
+    margin-top: -2rem;
+    font-family: 'Cardo',serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--primaryColor);
+}
+main section#authorBook .content > p{
+    color: var(--colorGray);
+    font-size: 1.1rem;
+    font-family: 'Inter',serif;
+    line-height: 1.4;
+}
+main section#authorBook .content .bookDetail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main section#authorBook .content .bookDetail .detail1 ,
+ main section#authorBook .content .bookDetail .detail2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+main section#authorBook .content .bookDetail .detail1 > span , 
+main section#authorBook .content .bookDetail .detail2 > span{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--secondaryColor);
+}
+main section#authorBook .content .bookDetail .detail1 .info ,
+ main section#authorBook .content .bookDetail .detail2 .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+main section#authorBook .content .bookDetail .detail1 .info> h3,
+ main section#authorBook .content .bookDetail .detail2 .info> h3{
+    color: var(--primaryColor);
+    font-size: 1.2rem;
+    font-family: 'Cardo',serif;
+    font-weight: 700;
+}
+ main section#authorBook .content .bookDetail .detail1 .info > p,
+ main section#authorBook .content .bookDetail .detail2 .info > p{
+    color: var(--colorGray);
+    font-family: 'Inter',serif;
+    font-size: 1rem;
+ }
+ main section#authorBook .content a.btn-outline{
+    width: 70%;
+    color: var(--primaryColor);
+    font-weight: 600;
+    text-align: center;
+    transition: all 600ms ease;
+}
+ main section#authorBook .content a.btn-outline:hover{
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border: none;
+ }
+ /*=============END OF AUTHORBOOK=====================================*/
+ main section#about {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--colorWhiteV3);
+    padding: 6rem 12rem 0;
+}
+main section#about .aboutWrapper{
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+     gap: 3rem;
+ } 
+ main section#about .aboutWrapper .leftAuthor{
+    flex-basis: 50%;
+ }
+ main section#about .aboutWrapper .leftAuthor .imgWrapper{
+    padding: 1rem;
+    width: 75%;
+    position: relative;
+    margin-inline: auto;
+ }
+
+ main section#about .aboutWrapper .leftAuthor .imgWrapper img{
+    position: relative;
+    z-index: 2;
+ }
+ main section#about .aboutWrapper .leftAuthor .imgWrapper::before{
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    border: inherit;
+    z-index: 1;
+    border-width: 0.4rem 0 0 0.4rem;
+     width: 96%;
+     height: 96%;
+    box-shadow: inset 0 0 0 0.6rem var(--secondaryColor);
+    pointer-events: none;
+    content: ''
+ }
+main section#about .aboutWrapper .rightContent{
+    flex-basis: 45%;
+    padding: 3rem 1rem;
+}
+main section#about .aboutWrapper .rightContent > h2{
+    position: relative;
+    font-family: 'Cardo' , serif;
+    font-size: 2rem;
+    color: var(--primaryColor);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+main section#about .aboutWrapper .rightContent > h2::after{
+    display: inline-block;
+    content: '';
+    width: 3rem;
+    height: 0.15rem;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    z-index: 1;
+    bottom: -0.5rem;
+    left: 1%;
+}
+main section#about .aboutWrapper .rightContent >p{
+    color: var(--colorGray);
+    font-family: 'Inter',serif;
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.4;
+    margin-block: 0.6rem;
+}
+main section#about .aboutWrapper .rightContent .authorDetail{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 33.3%;
+}
+main section#about .aboutWrapper .rightContent .authorDetail .one{
+    width: 32%;
+    border-right: 2px solid var(--secondaryColor);
+}
+main section#about .aboutWrapper .rightContent .authorDetail .two{
+    width: 32%;
+    border-right: 2px solid var(--secondaryColor);
+}
+main section#about .aboutWrapper .rightContent .authorDetail .one > h3,
+main section#about .aboutWrapper .rightContent .authorDetail .two > h3,
+main section#about .aboutWrapper .rightContent .authorDetail .three > h3{
+    font-size: 3rem;
+    font-family: 'Cardo',serif;
+    font-weight: 700;
+    color: var(--primaryColor);
+}
+main section#about .aboutWrapper .rightContent .authorDetail .one > small,
+main section#about .aboutWrapper .rightContent .authorDetail .two > small,
+main section#about .aboutWrapper .rightContent .authorDetail .three > small{
+    color: var(--colorGray);
+    font-size: 1.1rem;
+}
+main section#about .aboutWrapper .rightContent .qrCodeWrapper{
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem  1rem;
+    background-color: var(--primaryColor);
+    gap: 2rem;
+    margin-top: 1rem;
+    width: 90%;
+}
+main section#about .aboutWrapper .rightContent .qrCodeWrapper .qrCode{
+    width: 110px;
+    height: 110px;   
+}
+main section#about .aboutWrapper .rightContent .qrCodeWrapper .qrDetail{
+    padding-top: 0.2rem;
+}
+main section#about .aboutWrapper .rightContent .qrCodeWrapper .qrDetail > h3{
+    font-size: 1.3rem;
+    font-family: 'Cardo',serif;
+    font-weight: 700;
+    color: var(--secondaryColor);
+}
+main section#about .aboutWrapper .rightContent .qrCodeWrapper .qrDetail > a.mail, a.tel{
+    display: block;
+    color: var(--colorGrayishWhite);
+    font-size: 1.1rem;
+    margin-block: 0.3rem;
+}
+/*===========================END OF ABOUT====================================*/
+main section#trusted {
+    width: 100%;
+    height: fit-content; 
+    background-color: var(--colorWhiteV2);
+    padding: 6rem 12rem 8rem;
+}
+main section#trusted > h2{
+    position: relative;
+    font-family: 'Cardo' , serif;
+    font-size: 2.5rem;
+    color: var(--primaryColor);
+    text-align: center;
+}
+main section#trusted > h2::after{
+    display: inline-block;
+    content: '';
+    width: 3rem;
+    height: 0.15rem;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    z-index: 1;
+    bottom: -0.5rem;
+    left: 48%;
+}
+main section#trusted .trustedWrapper {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+main section#trusted .trustedWrapper .one ,
+main section#trusted .trustedWrapper .two ,
+main section#trusted .trustedWrapper .three ,
+main section#trusted .trustedWrapper .four{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+    align-items: center;
+}
+main section#trusted .trustedWrapper > .one .imgWrapper , .four .imgWrapper{
+    width: 100px;
+}
+main section#trusted .trustedWrapper > .two .imgWrapper, .three .imgWrapper {
+    width: 140px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main section#trusted .trustedWrapper .one .content,
+main section#trusted .trustedWrapper .two .content,
+main section#trusted .trustedWrapper .three .content,
+main section#trusted .trustedWrapper .four .content{
+    padding: 0rem 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+main section#trusted .trustedWrapper .one .content > h3,
+main section#trusted .trustedWrapper .two .content >h3,
+main section#trusted .trustedWrapper .three .content > h3,
+main section#trusted .trustedWrapper .four .content >h3{
+    color: var(--primaryColor);
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+main section#trusted .trustedWrapper .one .content > p,
+main section#trusted .trustedWrapper .two .content >p,
+main section#trusted .trustedWrapper .three .content > p,
+main section#trusted .trustedWrapper .four .content >p{
+    color: var(--colorGray);
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.1;
+    font-family: 'Inter', serif;
+}
+/*=======================END OF TRUSTED CLIENTS============================*/
+main section#getBookcopy{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--primaryColor);
+    padding: 4rem 12rem;
+}
+main section#getBookcopy .getBookWrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+main section#getBookcopy .getBookWrapper .leftBookWrapper{
+    padding: 1rem 3rem;
+}
+main section#getBookcopy .getBookWrapper .leftBookWrapper button.btn-outline{
+    color: var(--colorWhiteV2);
+    transition: all 300ms ease;
+    font-weight: 600;
+    cursor: pointer;
+}
+main section#getBookcopy .getBookWrapper .leftBookWrapper button.btn-outline:hover{
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+}
+main section#getBookcopy .getBookWrapper .leftBookWrapper > h2{
+    position: relative;
+    font-family: 'Cardo' , serif;
+    font-size: 2.5rem;
+    color: var(--colorWhiteV2);
+    text-align: left;
+    margin-bottom: 1.3rem;
+}
+main section#getBookcopy .getBookWrapper .leftBookWrapper > h2::after{
+    display: inline-block;
+    content: '';
+    width: 3rem;
+    height: 0.15rem;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    z-index: 1;
+    bottom: -0.5rem;
+    left: 1%;
+}
+main section#getBookcopy .getBookWrapper .leftBookWrapper > p{
+    color: var(--colorGray);
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-block: 1.8rem;
+    font-family: 'Inter', serif;
+}
+/*===========END OF GET A BOOK SECTION===================*/
+main section#whatYouWillLearn {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--colorWhite);
+    padding: 6rem 12rem;
+}
+main section#whatYouWillLearn > h2{
+    position: relative;
+    font-family: 'Cardo' , serif;
+    font-size: 2.5rem;
+    color: var(--primaryColor);
+    text-align: center;
+}
+main section#whatYouWillLearn > h2::after{
+    display: inline-block;
+    content: '';
+    width: 3rem;
+    height: 0.15rem;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    z-index: 1;
+    bottom: -0.5rem;
+    left: 48%;
+}
+main section#whatYouWillLearn .whatYouLearnWrapper{
+    padding: 2rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 2rem;
+}
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer .one ,
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer .two , 
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer .three , 
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer .four{
+    width: 100%;
+    height: 240px;
+    background-color: var(--colorWhitev4);
+    padding: 2rem;
+}
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer .one  span,
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer .two  span,
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer .three  span,
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer .four  span{
+    display: inline-block;
+    padding: 0.8rem;
+    background-color: var(--secondaryColor);
+    border-radius: 50%;
+    color: var(--primaryColor);
+    margin-bottom: 1rem;
+}
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer > .one > h3,
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer > .two > h3,
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer > .three > h3,
+main section#whatYouWillLearn .whatYouLearnWrapper .leftContainer > .four > h3{
+    font-family: 'Cardo', serif;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--primaryColor);
+    font-size: 1.1rem;
+    text-align: left;
+}
+main section#whatYouWillLearn .whatYouLearnWrapper .rightContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+main section#whatYouWillLearn .whatYouLearnWrapper .rightContainer .imgWrapper{
+    z-index: 9;
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    margin-inline: auto;
+}
+main section#whatYouWillLearn .whatYouLearnWrapper .rightContainer .imgWrapper::after{
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    border: inherit;
+    z-index: -1;
+    border-width: 0.4rem 0 0 0.4rem;
+     width: 96%;
+     height: 96%;
+    box-shadow: inset 0 0 0 0.6rem var(--secondaryColor);
+    pointer-events: none;
+    content: ''
+}
+/*================END OF WHAT YOU WILL LEARN=========================*/
+main section#subscribe{
+    width: 100%;
+   height: fit-content;
+    background-color: var(--secondaryColor);
+    padding: 6rem 12rem;
+}
+main section#subscribe .subscribeWrapper{
+    padding: 0 8rem;
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+main section#subscribe .subscribeWrapper >h2{
+    position: relative;
+    font-family: 'Cardo' , serif;
+    font-size: 2.5rem;
+    color: var(--primaryColor);
+    text-align: center;
+   
+}
+main section#subscribe .subscribeWrapper > h2::after{
+    display: inline-block;
+    content: '';
+    width: 4rem;
+    height: 0.15rem;
+    background-color: var(--primaryColor);
+    position: absolute;
+    z-index: 1;
+    bottom: -0.6rem;
+    left: 40%;
+}
+main section#subscribe .subscribeWrapper > p {
+    color: var(--primaryColor);
+    padding: 0 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-block: 1.2rem;
+    font-family: 'Inter', serif;
+}
+main section#subscribe .subscribeWrapper .inputWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row ;
+    gap: 1.2rem;
+}
+main section#subscribe .subscribeWrapper .inputWrapper input[type="email"]{
+    width: 75%;
+    background-color: var(--colorWhiteV2);
+    border: 1px solid var(--primaryColor);
+    padding: 1.2rem 2.4rem;
+    transition: all 600ms ease;
+    color: var(--primaryColor);
+    font-size: 1.2rem;
+}
+main section#subscribe .subscribeWrapper .inputWrapper input[type="email"]::placeholder{
+    color: var(--primaryColor);
+    font-size: 1.1rem;
+}
+main section#subscribe .subscribeWrapper .inputWrapper input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="email"]:focus-within{
+    cursor: pointer;
+    outline: 1px solid var(--primaryColor);
+}
+main section#subscribe .subscribeWrapper .inputWrapper button.subBtn{   
+        width: 35%;
+        padding: 1.2rem 2.4rem;
+        border: 1px solid transparent;
+        background-color: var(--primaryColor);
+        color: var(--colorWhiteV3);
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 600ms ease;
+        font-weight: 500;
+}
+main section#subscribe .subscribeWrapper .inputWrapper button.subBtn:hover{
+    background-color: transparent;
+    border: 1px solid var(--primaryColor);
+    color: var(--primaryColor);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+/*===================END OF SUBSCRIBE===========================*/
+footer {
+    width: 100%;
+    padding: 4rem 12rem;
+    height: fit-content;
+    background-color: var(--primaryColor);
+}
+footer .footerWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--colorGray);
+    padding-bottom: 2rem;
+}
+footer .footerWrapper .f1 .logoWrapper a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+    color: var(--colorWhiteV3);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+footer .footerWrapper .f1 .iconContainer{
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+footer .footerWrapper .f1,footer .footerWrapper .f2,footer .footerWrapper .f3,footer .footerWrapper .f4{
+    width: 23%;
+    padding: 1rem 2rem;
+}
+footer .footerWrapper .f2 h3,
+footer .footerWrapper .f3 h3,
+footer .footerWrapper .f4 h3{
+    font-family: 'Cardo', serif;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--colorWhiteV3);
+    font-size: 1.3rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+footer .footerWrapper .f2 ul,
+footer .footerWrapper .f3 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    list-style-image: url("Assets/Images/icon-list-style.svg");
+    padding-left: 2rem;
+}
+footer .footerWrapper .f2 ul li , 
+footer .footerWrapper .f3 ul li{
+    display: list-item;
+    padding-left: 1rem;
+}
+footer .footerWrapper .f2 ul li a, 
+footer .footerWrapper .f3 ul li a{
+    color: var(--colorWhiteV3);
+}
+footer .footerWrapper .f4 address{
+    color: var(--colorWhiteV3);
+    line-height: 1.2;
+    font-size  : 1.1rem;
+   
+}
+footer .footerWrapper .f4 address > a{
+    display: block;
+    color: var(--colorGrayishWhite);
+    font-size: 1.1rem;
+    margin-block: 0.3rem;
+}
+footer .copyRight{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    padding: 2rem 0 0;
+    justify-content: center;
+    color: var(--colorGrayishWhite);
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 2;
+}
