@@ -1,4 +1,7 @@
 @media (min-width: 320px) and (max-width: 480px) {
+    main section{
+        overflow-x: hidden;
+    }
     header nav {
         align-items: center;
         justify-content: space-between;
