@@ -16,12 +16,17 @@ menuBtn.addEventListener('click',()=>{
 
 
 closeBtn.addEventListener('click',()=>{
-    navContainer.classList.remove('active');
     navContainer.style.right = '-100%';
     // 👇 this was actually causing it to not animate back to '0'
     // navContainer.style.display = 'none'; 
     closeBtn.style.display = 'none'
     menuBtn.style.display = 'block';
+    setTimeout(() => {
+        navContainer.style.display = 'none'; 
+        // console.log("Display none the container after 800ms delay");
+      }, 800);
+      
+    navContainer.classList.remove('active');
     cartCon.src = 'Assets/Images/cart-svg.svg';
-
+    
 })
