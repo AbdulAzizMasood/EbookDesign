@@ -18,35 +18,31 @@
     }
 
     header nav .navItems {
-        /* position: absolute;
-        top: 6rem;
-        right: 0;
-        width: 70%;
-        height: 40vh;
-        background-color: var( --colorWhitev4);
-        display: flex;
-        flex-direction: column;
-        justify-content: center; */
-      
-        position: absolute;
         top: 4.5rem;
-        right: -100%;
         width: 50%;
-        height: 60vh;
+        height: 55vh;
         background-color: var(--colorWhitev4);
         display: flex;
         flex-direction: column;
         justify-content: center;
         display: none;
+        position: absolute;
+        z-index: 99;
+        right: -100%;
         padding: 2rem 1rem;
-        transition: all 800ms ease;
-        animation: animate 400ms ease;
+        animation: animate 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 900ms ease-in;
+    }
+    header nav .navItems.active{
+        display: flex;
+        transition: all 900ms ease-in;
+        right: 0%;
     }
     @keyframes animate {
-        from{
+        0%{
             right: -100%;
         }
-        to{
+        100%{
             right: 0%;
         }
     }
@@ -443,5 +439,8 @@
     footer .copyRight{
         height: fit-content;
         padding: 0 1rem 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
     }
+    /* footer .copyRight{} */
 }
