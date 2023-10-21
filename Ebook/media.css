@@ -1,4 +1,5 @@
 @media (min-width: 320px) and (max-width: 480px) {
+    header nav,
     main section{
         overflow-x: hidden;
     }
