@@ -20,7 +20,7 @@
     header nav .navItems {
         top: 4.5rem;
         width: 50%;
-        height: 55vh;
+        height: 46vh;
         background-color: var(--colorWhitev4);
         display: flex;
         flex-direction: column;
